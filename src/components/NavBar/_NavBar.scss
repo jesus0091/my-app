@@ -1,0 +1,124 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+#navbarContainer {
+    width: 100%;
+    bottom: 0;
+    height: 68px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  
+  #navbar {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    align-items: center;
+  }
+  
+  #bubbleWrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    bottom: 25px;
+  }
+  
+  .bubble {
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    bottom: 85px;
+    border-radius: 50%;
+    z-index: 1;
+    transform: translateY(150%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15rem;
+  }
+  
+  .icon {
+    opacity: 0;
+  }
+  
+  #bubble1 {
+    transform: translateY(0%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  #bubble1 > span {
+    opacity: 0.7;
+    color: white;
+  }
+  
+  #bgWrapper {
+    filter: url(#goo);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 60px;
+  }
+  
+  #bg {
+    background: white;
+    width: 120%;
+    height: 100%;
+    margin-left: -10%;
+  }
+  
+  #bgBubble {
+    position: absolute;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    bottom: -50px;
+    left: 16.67%;
+    transform: translateX(-50%);
+  }
+  
+  #menuWrapper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menuElement {
+    opacity: 0.4;
+    cursor: pointer;
+    font-size: 1.15rem;
+    color: white;
+  }
+  .menuElement:hover {
+    opacity: 0.5;
+  }
+  
+  #contentWrapper {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #contentWrapper h2 {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+  
+  .content {
+    display: none;
+    opacity: 0;
+  }
+  
