@@ -1,6 +1,13 @@
 @import './base/fonts';
 @import './base/normalize';
+
+@import './layouts/home';
+
 @import '../components/NavBar/NavBar';
 @import '../components/Header/header';
-@import '../components/ItemListContainer/itemListContainer';
+@import '../components/Banner/banner';
 @import '../components/Category/category';
+@import '../components/ItemCount/itemCount';
+@import '../components/Card/Card.scss';
+
+

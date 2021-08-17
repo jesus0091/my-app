@@ -1,16 +1,36 @@
-import React from 'react'
-import { Container, } from 'react-bootstrap'
+// import React, {useState, useEffect} from 'react'
+import CardComponent from '../Card/Card';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
+
     return (
-        
-        <Container fluid className='greeting'>
-        <div className='container greetingCard'>
-            <p className='greetingText'>{greeting}</p>
-            <span className='greetingSubText'> {greeting} </span>
+        <div className='container containerProducts'>
+                    <CardComponent 
+                        title='Producto 1'
+                        description='Algun texto'
+                        stock='5'
+                    />
+                    <CardComponent 
+                        title='Producto 1'
+                        description='Algun texto'
+                        stock='5'
+                    />
+                    <CardComponent 
+                        title='Producto 1'
+                        description='Algun texto'
+                        stock='5'
+                    />
+                    <CardComponent 
+                        title='Producto 1'
+                        description='Algun texto'
+                        stock='5'
+                    />
+                    <CardComponent 
+                        title='Producto 1'
+                        description='Algun texto'
+                        stock='5'
+                    />           
         </div>
-        </Container>
-        
     )
 }
 
