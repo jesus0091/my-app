@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinus, faPlus, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-const ItemCount = () => {
+const ItemCount = (stock) => {
     const [number, setNumber] = React.useState(1);
 
     const handleDown = () => {

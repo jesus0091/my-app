@@ -1,0 +1,45 @@
+	{
+  "data":
+	0
+	id 1
+	name "Producto A"
+	image "http://nazgul.com.ar/images/1.png"
+	short_description "Descripción corta del producto A"
+	price "$100.00"
+	1
+	id 2
+	name "Producto B"
+	image "http://nazgul.com.ar/images/2.png"
+	short_description "Descripción corta del producto B"
+	price "$200.00"
+	2
+	id 3
+	name "Producto C"
+	image "http://nazgul.com.ar/images/3.png"
+	short_description "Descripción corta del producto C"
+	price "$300.00"
+	3
+	id 4
+	name "Producto D"
+	image "http://nazgul.com.ar/images/4.png"
+	short_description "Descripción corta del producto D"
+	price "$400.00"
+	4
+	id 5
+	name "Producto E"
+	image "http://nazgul.com.ar/images/5.png"
+	short_description "Descripción corta del producto E"
+	price "$500.00"
+	5
+	id 6
+	name "Producto F"
+	image "http://nazgul.com.ar/images/6.png"
+	short_description "Descripción corta del producto F"
+	price "$600.00"
+	6
+	id 7
+	name "Producto G"
+	image "http://nazgul.com.ar/images/7.png"
+	short_description "Descripción corta del producto G"
+	price "$700.00"
+  }
