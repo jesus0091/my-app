@@ -10,10 +10,9 @@ const Item = ({product}) => {
                 <Card.Title>{product.title}</Card.Title>
                 <Card.Text>{product.cathegory}</Card.Text>
                 <Card.Text>{product.price}</Card.Text>
-                <ItemCount stock='10' />
+                <ItemCount />
             </Card.Body>
         </Card>
     )
 }
-
 export default Item

@@ -5,7 +5,7 @@ import { faMinus, faPlus, faShoppingCart } from '@fortawesome/free-solid-svg-ico
 const ItemCount = () => {
     
     const onAdd = () => {
-        let stock = '10';
+        let stock = 10;
         
         (number > stock)? alert('La cantidad supera el stock'): alert('Agrado al carrito');
         stock = stock - number;
