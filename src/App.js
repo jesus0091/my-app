@@ -8,9 +8,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Category from './components/Category/Category';
-// import Banner from './components/Banner/Banner';
-// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
@@ -24,16 +21,6 @@ function App() {
           </Switch>
         </Router>
         <NavBar />
-
-
-
-        {/* <Header />
-        <Banner 
-          greeting='Hola!'
-        />
-        <Category />
-        <ItemListContainer />
-        <NavBar/> */}
     </div>
   );
 }
