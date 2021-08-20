@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHouseUser, faShoppingBag, faUserCircle} from '@fortawesome/free-solid-svg-icons'
 
 
+
 const NavBar = () => {
     const move = (id, position, color) => {
         let tl = gsap.timeline();

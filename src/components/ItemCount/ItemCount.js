@@ -21,7 +21,6 @@ const ItemCount = () => {
         setNumber(number + 1);
     };
     
-
     return (
         <div className="itemCount" >
             <div className='countButtons'>
