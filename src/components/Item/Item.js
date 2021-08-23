@@ -1,20 +1,19 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
-import ItemCount from '../ItemCount/ItemCount'
 
 const Item = ({product}) => {
     return (
-        <Card className='cardProduct'>
-            <Card.Img  className='imageProduct' variant="top" src={product.image} />
-            <Card.Body className='' >
-                <Card.Title>{product.title}</Card.Title>
-                <Card.Text>{product.cathegory}</Card.Text>
-                <Card.Text>{product.price}</Card.Text>
-                <ItemCount 
-                    initial= {1}
-                    stock= {10} />
-            </Card.Body>
-        </Card>
+        <div className='cardProduct container-fluid'>
+            <div className='row'>
+                <div className='col-4 col-sm-12 imageProduct'>
+                    <img src={product.image} alt={product.id}/>
+                </div>
+                <div className='cardBody col-8 col-sm-12'>
+                    <h3 className='cardTitle'>{product.title}</h3>
+                    <p className='cardCategory'>{product.category}</p>
+                    <span className='cardPrice'>$ {product.price}</span>
+                </div>
+            </div>
+        </div>
     )
 }
 export default Item

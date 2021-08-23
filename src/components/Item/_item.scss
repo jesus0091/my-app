@@ -1,16 +1,57 @@
-// .cardProduct {
-//     padding: 0;
-//     overflow: hidden;
-//     border-radius: 15px !important;
-//     border: 1px solid rgba(128 128 128 / 0.1);
-
-//     .card-body {
-//         padding: 0;
-//     }
-// }
 .cardProduct {
-
+    border-radius: 7px;
+    background: #fff5ea7a;
+    position: relative;
+    overflow: hidden;
+    box-shadow: .5px .5px 5px .5px rgba(0, 0, 0, 0.2);
+    min-height: 7rem;
+    max-height: 8rem;
+    
     .imageProduct {
-        max-width: 5rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+        min-height: max-content;
+        max-height: 8rem;
+
+        img {
+            width: 100%;
+        }
+    }
+    .cardBody {
+        padding: .5rem;
+        display: grid;
+        grid-template-rows: subgrid ;
+        grid-row: 3 ;
+
+
+        .cardTitle {
+            font-size: .85rem;
+            margin-bottom: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+    
+        }
+        .cardCategory {
+            font-weight: bold;
+            font-size: .75rem;
+            color: rgba( #000000, 0.5);
+        }
+        .cardPrice {
+            font-size: 1.25rem;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 3.5px;
+        background: $color-7;
+        right: 0;
+        bottom: 0;
     }
 }

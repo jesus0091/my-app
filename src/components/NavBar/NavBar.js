@@ -32,7 +32,7 @@ const NavBar = () => {
                         <div id="bubble3" className="bubble"><span className="icon"><FontAwesomeIcon icon={faUserCircle} /></span></div>
                     </div>
                     <div id="menuWrapper">
-                        <NavLink to='/#' id="menu1" className="menuElement" onClick={ () => move('1', '16.67%', '#ffff')}>
+                        <NavLink to='/#' id="menu1" className="menuElement" onClick={ () => move('1', '16.67%', '#fff5ea')}>
                             <FontAwesomeIcon icon={faHouseUser} />
                         </NavLink>
                         <NavLink to="/#" id="menu2" className="menuElement" onClick={ () => move('2', '50.0%', '#ffff')}>
