@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.67f10de1.chunk.css",
+    "main.js": "/my-app/static/js/main.c575d4ee.chunk.js",
+    "main.js.map": "/my-app/static/js/main.c575d4ee.chunk.js.map",
+    "runtime-main.js": "/my-app/static/js/runtime-main.f076bef1.js",
+    "runtime-main.js.map": "/my-app/static/js/runtime-main.f076bef1.js.map",
+    "static/css/2.da1eef19.chunk.css": "/my-app/static/css/2.da1eef19.chunk.css",
+    "static/js/2.ebfa9c12.chunk.js": "/my-app/static/js/2.ebfa9c12.chunk.js",
+    "static/js/2.ebfa9c12.chunk.js.map": "/my-app/static/js/2.ebfa9c12.chunk.js.map",
+    "index.html": "/my-app/index.html",
+    "static/css/2.da1eef19.chunk.css.map": "/my-app/static/css/2.da1eef19.chunk.css.map",
+    "static/css/main.67f10de1.chunk.css.map": "/my-app/static/css/main.67f10de1.chunk.css.map",
+    "static/js/2.ebfa9c12.chunk.js.LICENSE.txt": "/my-app/static/js/2.ebfa9c12.chunk.js.LICENSE.txt",
+    "static/media/silla_category.5f78af88.png": "/my-app/static/media/silla_category.5f78af88.png",
+    "static/media/sillones_category.414c8e56.png": "/my-app/static/media/sillones_category.414c8e56.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f076bef1.js",
+    "static/css/2.da1eef19.chunk.css",
+    "static/js/2.ebfa9c12.chunk.js",
+    "static/css/main.67f10de1.chunk.css",
+    "static/js/main.c575d4ee.chunk.js"
+  ]
+}
