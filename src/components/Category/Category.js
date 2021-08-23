@@ -6,7 +6,7 @@ const Category = () => {
     return (
         <div className='categoryContainer container'>
                 <h2>Categorias</h2>
-                <div className='categoryList'>
+                <div className='categoryList '>
                         <a className='category c-1' href="/#">
                                 <span className='categoryName'>Sillones</span>
                                 <div className='imageCategory'>

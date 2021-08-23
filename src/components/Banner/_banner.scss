@@ -5,8 +5,8 @@
     min-height: 10rem;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right top, green, lime);
-    border-radius: 10px;
+    background: linear-gradient(to right top, $color-7,$color-4, $color-2);
+    border-radius: 7px;
     overflow: hidden;
     position: relative;
     padding: 0;
