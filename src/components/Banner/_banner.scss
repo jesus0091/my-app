@@ -1,3 +1,5 @@
+@import '../../scss/base/colors';
+
 .greetingCard {
     display: flex;
     min-height: 10rem;
@@ -13,17 +15,18 @@
     position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    &::before {
+        position: absolute;
+        content: '';
+        height: 10rem;
+        background: linear-gradient(rgba($color-9, 1)30%, rgba($color-8, 0.7)70%, rgba($color-7, 0) 100%);
+        width: 100%;
+        margin: 0;
+        left: 0;
+        top: 0;
+    }
 } 
-.greeting::before {
-    position: absolute;
-    content: '';
-    height: 10rem;
-    background: linear-gradient(rgba(0 0 0 / 1)30%, rgba(0 0 0 / 0.5)60%, rgba(0 0 0 / 0) 100%);
-    width: 100%;
-    margin: 0;
-    left: 0;
-    top: 0;
-}
 
 .greetingText {
     font-size: 3rem;

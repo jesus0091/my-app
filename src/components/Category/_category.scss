@@ -1,27 +1,72 @@
-.categoryCard {
+@import '../../scss/base/colors';
+
+.categoryContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-    a {
-        text-decoration: none;
+    
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.15rem;
+        text-align: center;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        padding: 0.5rem;
     }
-}
+    .categoryList {
+        display: grid;
+        grid-gap: .5rem;
+        grid-auto-flow: dense;
+        grid-auto-rows:max-content;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        width: 100%;
 
-.Category {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    background-color: green;
-    text-decoration: none;
-    color: white;
-}
+        .category {
+            font-family: 'Montserrat';
+            font-weight: bolder;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+            height: 80px;
+            border-radius: 7px;
+            color: $color-0;
+            overflow: hidden;
+            position: relative;
 
-.textCategory {
-    font-size: .75rem;
-    color: black;
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+        .categoryName {
+            padding: 0.85rem;
+            line-height: 1;
+        }
+        .imageCategory {
+            overflow: hidden;
+            padding: 0.85rem;
+            
+            img {
+                display: block;
+                z-index: -1;
+                height: 80px;
+            }
+        }
+
+        .c-1 {
+            background: $color-3;
+        }
+        .c-2 {
+            background: $color-5;
+        }
+        .c-3 {
+            background: $color-8;
+        }
+        .c-4 {
+            background: $color-6;
+        }
+    }
+    
 }

@@ -1,11 +1,12 @@
-
+@import '../../scss/base/colors';
 
 .NavbarTop {
     width: 100%;
-    background: black;
+    background: $color-9;
     color: white;
-}
-.link {
-    font-family: 'Roboto';
-    color: white;
+
+    .link {
+        font-family: 'Roboto';
+        color: white;
+    }
 }

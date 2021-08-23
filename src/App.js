@@ -19,8 +19,8 @@ function App() {
             <Route path='/' exact component={Home} />
             <Route path='/profile' component={Profile} />
           </Switch>
-        </Router>
         <NavBar />
+        </Router>
     </div>
   );
 }
