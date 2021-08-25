@@ -1,15 +1,15 @@
 @import './base/fonts';
 @import './base/normalize';
-
 @import './layouts/home';
-
 @import '../components/NavBar/NavBar';
 @import '../components/Header/header';
 @import '../components/Banner/banner';
 @import '../components/Category/category';
 @import '../components/ItemCount/itemCount';
-
 @import '../components/ItemList/itemList';
 @import '../components/Item/item';
+@import '../components/ItemDetailContainer/itemDetailContainer';
+@import '../components/ItemDetail/itemDetail';
+@import '../components/Spinner/spinner';
 
 

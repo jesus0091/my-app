@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHouseUser, faShoppingBag, faUserCircle} from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 
-
-
 const NavBar = () => {
     const move = (id, position, color) => {
         let tl = gsap.timeline();
@@ -63,7 +61,3 @@ const NavBar = () => {
     
 }
 export default NavBar
-
-
-
-

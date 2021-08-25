@@ -1,27 +1,26 @@
 import './scss/App.scss';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './views/Home/Home'
 import Profile from './views/Profile/Profile'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
-
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
-    
-    <div className="App">
+    <Router>
+        <div className="App">
         <Header />
-        <Router>
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/profile' component={Profile} />
+            <Route path='/category/:id' component={Profile} />
+            <Route path='/detail/:id' component={ItemDetailContainer} />
           </Switch>
         <NavBar />
-        </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 export default App;

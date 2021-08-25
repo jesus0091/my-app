@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "title": "Silla Milan",
+        "description": "Un modelo descontracturado, combinando lo mejor de la madera con el polipropileno. Este diseño de características nórdicas tiene curvas delicadas, pero con la ventaja de la facilidad en su mantenimiento diario. Sus materiales logran una gran resistencia para el uso del día a día. Ideal para cocinas y comedores diarios. Un modelo exquisito para ese sector especial de tu hogar.",
+        "price": 4437,
+        "discount": 0,
+        "category": "Sillas de Diseño",
+        "image": "https://ibb.co/G9FTDtB"
+        
+    },
+    {
+        "id": 2,
+        "title": "Silla Campbell",
+        "description": "Simple, dinámica, divertida y económica. Esas son solo algunas características de este modelo, pensado para el uso diario. Con su base completamente metálica y su casco en polipropileno de alta resistencia, es ideal para utilizar en espacios comunes de alto tránsito o bien cocinas.",
+        "price": 6381,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    
+    {
+        "id": 3,
+        "title": "Silla Berry",
+        "description": "Un modelo descontracturado, combinando lo mejor del diseño. Este modelo de características Nórdicas tiene curvas delicadas, pero con la ventaja de facilidad en su mantenimiento diario. Sus materiales logran una gran resistencia para el uso del día a día. Ideal para cocinas y comedores diarios. Un modelo exquisito para ese sector especial de tu hogar. Esta versión viene desarmada y lista para que puedas ensamblarla en tu hogar en tan solo 5 minutos. Incluye su completo Kit de armado, con todos los componentes necesarios para su fácil ensamblaje.",
+        "price": 14400,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    {
+        "id": 4,
+        "title": "Silla Eames con Almohadon",
+        "description": "La Silla Eames es un clásico del mobiliario del siglo XX. Construida con patas de madera lustrada e hilos de acero que forman una auténtica base Eiffel. Esta combinación de gran calidad tiene un efecto sobrio y aporta a la silla una exclusiva óptica de modernidad, ya sea como silla de hogar, en una zona de recepción o en la habitación de un hotel. El agregado de su almohadón de tela le da ese detalle diferencial que queremos ver en nuestro ambiente.",
+        "price": 5706,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    {
+        "id": 5,
+        "title": "Silla Vernazza MO",
+        "description": "Un diseño único y diferente que sirve para múltiples propósitos. Construida en polipropileno y policarbonato de alta resistencia, este modelo se utiliza en bares, salas de reuniones, confiterías o bien para tu hogar si buscás algo divertido y moderno.",
+        "price": 13176,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    {
+        "id": 6,
+        "title": "Silla Dinamarca",
+        "description": "Este modelo, basado en la clásica silla Eames, tienen todos sus componentes, con el agregado de un diseño más moderno con curvas y líneas que lo hacen un modelo único. Su casco ampliamente confortable, permite pasar excelentes momentos con amigos o en familia. Un gran modelo que agrega diseño a cualquier rincón de tu hogar.",
+        "price": 11574,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    {
+        "id": 7,
+        "title": "Silla Eames Patchwork",
+        "description": "El Sillón Eames es un clásico del mobiliario del siglo XX. Construido con patas de madera lustrada e hilos de acero que forman una auténtica base Eiffel. Esta combinación de gran calidad tiene un efecto sobrio y aporta a la silla una exclusiva óptica de modernidad, ya sea como silla de hogar, en una zona de recepción o en la habitación de un hotel. Tapizada íntegramente con tela en Patchwork, esta versión ofrece una variedad del modelo original, que no sólo hace que sea funcional sino un atractivo de decoración.",
+        "price": 26244,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    {
+        "id": 8,
+        "title": "Silla Siggy",
+        "description": "Un modelo descontracturado, combinando lo mejor de la madera con el polipropileno. Este diseño de características Nórdicas tiene curvas delicadas, pero con la ventaja de facilidad en su mantenimiento diario. Sus materiales logran una gran resistencia para el uso del día a día. Ideal para cocinas y comedores diarios. Un modelo exquisito para ese sector especial de tu hogar.",
+        "price": 13698,
+        "discount": 0,
+        "category": "Sillas de Diseño",
+        "image": "../image/silla_category_3.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Silla Lesja",
+        "description": "Un modelo descontracturado, combinando lo mejor de la madera con el polipropileno. Este diseño de características Nórdicas tiene curvas delicadas, pero con la ventaja de facilidad en su mantenimiento diario. Sus materiales logran una gran resistencia para el uso del día a día. Ideal para cocinas y comedores diarios. Un modelo exquisito para ese sector especial de tu hogar.",
+        "price": 26496,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    {
+        "id": 10,
+        "title": "Silla Luxemburgo",
+        "description": "Un modelo descontracturado, combinando lo mejor de la madera con el polipropileno. Este diseño de características Nórdicas tiene curvas delicadas, pero con la ventaja de facilidad en su mantenimiento diario. Sus materiales logran una gran resistencia para el uso del día a día. Ideal para cocinas y comedores diarios. Un modelo exquisito para ese sector especial de tu hogar.",
+        "price": 6381,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    },
+    {
+        "id": 11,
+        "title": "Silla Dante Antique",
+        "description": "Industrial, rústica, potente. Esas son solo algunas características que definen a nuestra Silla Dante. Íntegramente realizado en metal y con un un enchapado en madera de características únicas logrando el perfecto taburete estilo industrial. Para colocar en cocinas o bien en nuestro living comedor. La terminación antique de sus patas logra la perfección entre todos los materiales.",
+        "price": 41391,
+        "discount": 0,
+        "category": "Sillas de Diseño"
+    }
+]
