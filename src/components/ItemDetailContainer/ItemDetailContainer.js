@@ -27,4 +27,3 @@ const ItemDetailContainer = ({ match }) => {
 }
 
 export default ItemDetailContainer
-

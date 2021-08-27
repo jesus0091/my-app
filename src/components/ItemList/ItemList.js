@@ -9,8 +9,8 @@ const ItemList = ( props ) => {
             <div className='containerProducts'>{
                 props.products.map((product) => {
                     return (
-                        <Link className='itemLink' to={`/detail/${product.id}`}>
-                            <Item product={product} key={product.id}/>
+                        <Link className='itemLink' key={product.id} to={`/detail/${product.id}`}>
+                            <Item product={product} />
                         </Link>
                     )
                 })

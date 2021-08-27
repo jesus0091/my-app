@@ -1,5 +1,8 @@
 import React, {useEffect, useState}from 'react'
+import Banner from '../Banner/Banner';
+import Category from '../Category/Category';
 import Item from '../Item/Item';
+import { Link } from 'react-router-dom';
 
 const CategoryListContainer = ({match}) => {
 
@@ -26,6 +29,9 @@ const CategoryListContainer = ({match}) => {
     }, [categoryId])
 
     return (
+        <>
+        <Banner greeting='Hola!'/>
+        <Category />
         <div className='container'>
             <h2>{capCategoryId}</h2>
             <div className='containerProducts'>
@@ -33,17 +39,18 @@ const CategoryListContainer = ({match}) => {
                     category.map((e)=>{
                         return(
                             <div>
-
-                                <Item key={e.id} product={e}/>
-
+                                <Link className='itemLink' key={e.id} to={`/detail/${e.id}`}>
+                                    <Item product={e} />
+                                </Link>
+                                {/* <Item key={e.id} product={e}/> */}
                             </div>
                         )
                     })
                 }
             </div>
         </div>
+        </>
     )
 }
 
 export default CategoryListContainer
-

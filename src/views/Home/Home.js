@@ -6,6 +6,8 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 const Home = () => {
     return (
         <div className='vp_home'>
+            <Banner greeting='Hola!'/>
+            <Category />
             <ItemListContainer />
         </div>
     )
