@@ -6,7 +6,23 @@
     color: white;
 
     .link {
-        font-family: 'Roboto';
         color: white;
     }
+}
+
+.linkBrand {
+    font-family: 'Montserrat', sans-serif;
+    .brandCircle {
+        font-size: 1rem;
+    }
+    
+    .brandDeco {
+        font-weight: normal;
+
+    }
+    .brandHome {
+        font-weight: bold;
+    }
+
+
 }

@@ -2,12 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinus, faPlus, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-const ItemCount = ({stock, initial}) => {
-    const onAdd = () => {
-        (number > stock)? alert('La cantidad supera el stock'): alert('Agrado al carrito');
-        stock = stock - number;
-        console.log(stock)
-    }
+const ItemCount = ({stock, initial, product, onAdd}) => {
 
     const [number, setNumber] = React.useState(initial);
     const handleDown = () => {
@@ -19,7 +14,6 @@ const ItemCount = ({stock, initial}) => {
     
     return (
         <div className="itemCount" >
-            <p>Quedan {stock} disponibles!</p>
             <div className='countButtons'>
                 <button className='buttonCount' onClick={handleDown}>
                     <FontAwesomeIcon icon={faMinus} />
@@ -29,9 +23,12 @@ const ItemCount = ({stock, initial}) => {
                     <FontAwesomeIcon icon={faPlus} />
                 </button>
             </div>
-            <button type='button' className='addToCart' onClick={onAdd}>
-                <FontAwesomeIcon icon={faShoppingCart} />
-                <span>Agregar</span>
+            <button 
+                type='button' 
+                className='addToCart' 
+                onClick={()=> onAdd(number)}>
+                    <FontAwesomeIcon icon={faShoppingCart} />
+                    <span>Agregar</span>
             </button>
         </div>
     );
