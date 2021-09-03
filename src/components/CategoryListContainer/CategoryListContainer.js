@@ -11,7 +11,6 @@ const CategoryListContainer = ({ match }) => {
     return str.charAt(0).toUpperCase() + lower.slice(1);
   }
   const capCategoryId = capitalize(categoryId);
-
   const [category, setCategory] = useState([]);
   useEffect(() => {
     setTimeout(() => {

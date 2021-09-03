@@ -1,12 +1,17 @@
 import React, {useState} from 'react'
 import { Container } from 'react-bootstrap'
-import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import { useCartContext } from '../../context/CartContext'
+import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({ product, stock=5 }) => {
 
+    const {addToCart} = useCartContext();
+    console.log('addToCart', addToCart)
+
     const [number, setNumber] = useState(null)
     const onAdd = (value) => {
+        addToCart( product , value)
         value > 0? setNumber(value) : alert("Prueba")
     }
 
@@ -29,14 +34,11 @@ const ItemDetail = ({ product, stock=5 }) => {
                             onAdd = {onAdd}
                             />
                         ):(
-                            <Link type="button" className="btn btn-success" to="/cart">
-                                Termina Compra
+                            <Link type="button" className="btn btn-success" to="./cart">
+                                Terminar Compra
                             </Link>
                         )
-                    }
-                    
-                    
-                    
+                    }          
                 </div>
             </div>
             <div className='detailDescription'>
@@ -44,7 +46,6 @@ const ItemDetail = ({ product, stock=5 }) => {
                 <p>{product.description}</p>
             </div>
         </Container>    
-        
     )
 }
 

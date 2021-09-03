@@ -7,22 +7,24 @@ import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CategoryListContainer from './components/CategoryListContainer/CategoryListContainer';
+import { CartProvider } from './context/CartContext';
 
 function App() {
-  return (
-    <Router>
-        <div className="App">
-        <Header />
-        
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/profile' component={Profile} />
-            <Route path='/detail/:id' component={ItemDetailContainer} />
-            <Route path='/category/:id' component={CategoryListContainer} />
-          </Switch>
-        <NavBar />
-      </div>
-    </Router>
-  );
+    return (
+        <CartProvider>
+            <Router>
+                <div className="App">
+                    <Header/>
+                    <Switch>
+                        <Route path='/' exact component={Home} />
+                        <Route path='/profile' component={Profile} />
+                        <Route path='/detail/:id' component={ItemDetailContainer} />
+                        <Route path='/category/:id' component={CategoryListContainer} />
+                    </Switch>
+                    <NavBar/>
+                </div>
+            </Router>
+        </CartProvider>
+    );
 }
 export default App;
