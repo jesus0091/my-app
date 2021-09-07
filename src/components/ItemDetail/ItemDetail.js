@@ -34,7 +34,7 @@ const ItemDetail = ({ product, stock=5 }) => {
                             onAdd = {onAdd}
                             />
                         ):(
-                            <Link type="button" className="btn btn-success" to="./cart">
+                            <Link type="button " className="finished" to="./cart">
                                 Terminar Compra
                             </Link>
                         )

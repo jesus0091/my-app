@@ -22,3 +22,17 @@
 .detailDescription {
     padding: 1rem;
 }
+
+.finished{
+    border-radius: 15px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: green;
+    color: white;
+    margin-top: 5px;
+    vertical-align: middle;
+    text-decoration: none;
+}
