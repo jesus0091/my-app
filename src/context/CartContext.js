@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
             const newCart = cart.map((cartElement) => {
                 if (cartElement.id === item.id) {
                     return { 
-                        ...cartElement, quantity: cartElement.quatity + quantity
+                        ...cartElement, quantity: cartElement.quantity + quantity
                     }
                 } else return cartElement;
             });

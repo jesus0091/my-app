@@ -3,26 +3,33 @@
 body{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     
 }
 #navbarContainer {
-    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
     bottom: 0;
+    z-index: 1030;
     height: 68px;
-    // background-color: white;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    overflow: hidden;
+    padding: 7px;
+    background: linear-gradient(to top, rgba($color-0, 0.7), rgba($color-0, 0));
+
+    
+
   }
   
   #navbar {
     width: 100%;
-    height: 60px;
+    height: 50px;
     background-color: $color-5;
-    position: absolute;
     display: flex;
     align-items: center;
+    border-radius: 7px;
+    z-index: 100;
+
+    
   }
   
   #bubbleWrapper {
@@ -30,17 +37,19 @@ body{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    bottom: 25px;
+    bottom: 18px;
+    left: 0;
+    padding: 7px;
   }
   
   .bubble {
-    background-color: $color-5;
+    background: $color-6;
     width: 40px;
     height: 40px;
-    bottom: 85px;
-    border-radius: 50%;
-    z-index: 1;
-    transform: translateY(150%);
+    bottom: 80px;
+    border-radius: 7px;
+    z-index: 999;
+    transform: translateY(200%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +59,7 @@ body{
   .icon {
     opacity: 0;
     color:  $color-0;
+    text-decoration: none;
   }
   
   #bubble1 {
@@ -62,16 +72,9 @@ body{
     text-decoration: none;
   }
   
-  #bgWrapper {
-    filter: url(#goo);
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    bottom: 60px;
-  }
+  
   
   #bg {
-    background: $color-0 ;
     width: 120%;
     height: 100%;
     margin-left: -10%;
@@ -79,20 +82,27 @@ body{
   
   #bgBubble {
     position: absolute;
-    background-color: $color-0 ;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    bottom: -50px;
-    left: 16.67%;
+    bottom: 25px;
+    left: 17%;
     transform: translateX(-50%);
+    background: rgba(#ffe75d, 0.8);
+    box-shadow: 0 0 15px rgba(#ffe75d, 0.8),
+                0 0 30px rgba(#ffe75d, 0.7),
+                0 0 45px rgba(#ffe75d, 0.6),
+                0 0 70px rgba(#ffe75d, 0.5);
+    z-index: 1;
   }
   
   #menuWrapper {
     position: absolute;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding: 7px;
   }
   
   .menuElement {
@@ -100,9 +110,11 @@ body{
     cursor: pointer;
     font-size: 1.15rem;
     color: white;
+    z-index: 1;
   }
+
   .menuElement:hover {
-    opacity: 0.5;
+    opacity: 1;
   }
   
   #contentWrapper {

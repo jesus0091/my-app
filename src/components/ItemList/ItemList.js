@@ -4,7 +4,7 @@ import Item from '../Item/Item'
 
 const ItemList = ( props ) => {
     return(
-        <div className='container '>
+        <div className='container itemList'>
             <h2 className='containerTitle'>Productos</h2>
             <div className='containerProducts'>{
                 props.products.map((product) => {

@@ -12,7 +12,14 @@
     grid-auto-flow: dense;
     grid-auto-rows:max-content;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+    
 }
+
 .itemLink {
     text-decoration: none;
+}
+
+.itemList {
+    margin-bottom: 75px;
 }
