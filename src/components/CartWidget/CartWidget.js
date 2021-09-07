@@ -15,7 +15,7 @@ const CartWidget = () => {
 
     return (
         <div className='cartWidget'>
-            <NavLink className='p-0'>
+            <NavLink className='p-0' to='/cart'>
                 <FontAwesomeIcon  icon={faShoppingCart} />
             </NavLink>
             {totalItems !== 0 && <span className='cartBadge'>{totalItems}</span>}

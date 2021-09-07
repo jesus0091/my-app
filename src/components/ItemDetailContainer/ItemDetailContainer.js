@@ -1,9 +1,11 @@
 import React, { useState, useEffect} from 'react';
+import { Spinner } from 'react-bootstrap';
 import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = ({ match }) => {
     let productId = match.params.id;
     const [product, setProduct] = useState({});
+    const [load, setLoad] = useState(true);
 
     console.log(product)
     useEffect(() => {
@@ -16,12 +18,16 @@ const ItemDetailContainer = ({ match }) => {
                 .then((data) => {
                     console.log(data)
                     setProduct(data)
+                    setLoad(false);
                 })
         }, 1500);
     }, [productId])
     return (
         <div className='itemDetailContainer'>
-            <ItemDetail product={product} />
+            {
+                load ? <Spinner /> : <ItemDetail product={product} />
+            }
+            
         </div>
     )
 }
