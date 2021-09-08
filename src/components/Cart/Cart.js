@@ -3,7 +3,7 @@ import { CartContext } from '../../context/CartContext'
 import CartItem from './CartItem/CartItem'
 
 const Cart = () => {
-    const {cart, clear} = useContext(CartContext);
+    const {cart, clear, removeItem} = useContext(CartContext);
     const [itemCart, setItemCart] = useState([]);
     useEffect(() => {
         setItemCart(cart);
@@ -14,7 +14,7 @@ const Cart = () => {
             <div className='cartContainer'>
                 {itemCart.map((item) => {
                     return (
-                    <CartItem key={item.Id} data={item} />
+                    <CartItem key={item.Id} data={item} removeItem={removeItem}/>
                     );
                 })}
             </div>

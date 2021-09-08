@@ -1,5 +1,74 @@
+@import '../../../scss/base/colors';
+
+$font-size: 0.85rem;
+$line-height: 1.5;
+$lines: 2;
+
 .cartItem {
-    background: white;
+    background: rgba($color-1, 0.5);
     border-radius: 7px;
     border: none;
+    box-shadow: .5px .5px 5px .5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-height: 8rem;
+    padding: 3px;
+
+    .cartItemBody {
+        border-bottom: 2px solid $color-0;
+    }
+    .cartImage {
+        overflow: hidden;
+        max-height: 5rem;
+
+        img {
+            width: 100%;
+        }
+    }
+    .cartDescription {
+        h3 {
+            display: block;
+            font-weight: bold;
+            display: -webkit-box;
+            height: $font-size * $line-height * $lines;
+            font-size: $font-size;
+            line-height: $line-height;
+            -webkit-line-clamp: $lines;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+        }
+
+    }
+    .cartControl {
+        display: flex;
+        justify-content: flex-end;
+
+        .trashItem{
+            background: none;
+            color: $color-5;
+            padding: 5px;
+            font-size: $font-size;
+            border: none;
+            border-radius: 50px;
+            width: 1.75rem;
+            height: 1.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:active {
+                transform: scale(0.95);
+                opacity: 1;
+            }
+        }
+    }
+    .itemPrice {
+        display: flex;
+        justify-content: flex-end;
+        p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    }
 }
