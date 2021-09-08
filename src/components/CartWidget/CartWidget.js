@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { useCartContext } from '../../context/CartContext'
-import { NavLink } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 
 const CartWidget = () => {
@@ -15,7 +15,7 @@ const CartWidget = () => {
 
     return (
         <div className='cartWidget'>
-            <NavLink className='p-0' to='/cart'>
+            <NavLink className='p-0 cartLink' to='/cart'>
                 <FontAwesomeIcon  icon={faShoppingCart} />
             </NavLink>
             {totalItems !== 0 && <span className='cartBadge'>{totalItems}</span>}

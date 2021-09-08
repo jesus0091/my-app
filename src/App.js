@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CategoryListContainer from './components/CategoryListContainer/CategoryListContainer';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
+// import {db} from './Firebase'
 
 function App() {
     return (

@@ -1,0 +1,30 @@
+@import '../../scss/base/colors';
+
+.cartView{
+    background: linear-gradient(to top, rgba($color-1, 0), rgba($color-5,1));
+    height: 100vh;
+    background-attachment:fixed;
+}
+
+    
+
+
+.clearCart {
+    background: red;
+    border: none;
+    border-radius: 50px;
+    color: $color-0;
+    padding: 2px 7px;
+    font-size: 0.85rem;
+}
+
+.cartContainer {
+    // border: 1px solid gray;
+    // border-radius: 7px;
+    display: grid;
+    grid-gap: .85rem;
+    grid-auto-flow: dense;
+    grid-auto-rows:max-content;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+}
