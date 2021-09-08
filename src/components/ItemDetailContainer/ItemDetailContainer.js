@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { Spinner } from 'react-bootstrap';
+import Spinner from '../Spinner/Spinner';
 import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = ({ match }) => {

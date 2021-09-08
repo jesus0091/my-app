@@ -1,7 +1,10 @@
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const CartItem = ({data}) => {
+const CartItem = ({data, removeItem}) => {
+    const removeId = () => {
+        removeItem(data.id)
+    }
     const totalItemPrice = data.quantity*data.price;
 
     return (
@@ -15,7 +18,7 @@ const CartItem = ({data}) => {
                     <p>{data.quantity} x ${data.price}</p>
                 </div>
                 <div className='cartControl col-3'>
-                    <button className='trashItem'>
+                    <button className='trashItem' onClick={removeId}>
                         <FontAwesomeIcon icon={faTrashAlt}/>
                     </button>
                 </div>
