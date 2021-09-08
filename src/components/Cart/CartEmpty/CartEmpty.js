@@ -15,12 +15,16 @@ const CartEmpty = () => {
 
   return (
       <div className='containerCartEmpty'>
-        <div className="">
-            <div ref={container}></div>
-        </div>
-        <p className='textCart'>Tu carrito está vacio</p>
-        <p className='textCart2'>Vuelve al Home y agrega productos!</p>
-      </div>
+          {/* <div> */}
+            <div className="cartEmpty">
+                <div className='empty' ref={container}></div>
+            </div>
+            <div className='textCartContainer'>
+              <p className='textCart'>Tu carrito está vacio</p>
+              <p className='textCart2'>Vuelve al Home y agrega productos!</p>
+            </div>
+          </div>
+      // </div>
   );
 };
 

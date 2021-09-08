@@ -1,0 +1,47 @@
+@import '../../../scss/base/colors';
+
+.containerCartEmpty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    
+    .cartEmpty {
+        position: relative;
+        
+        .empty {
+            height: 10rem;
+
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 8rem;
+            height: 8rem;
+            background: $color-1;
+            z-index: -1;
+            border-radius: 43% 57% 48% 52% / 43% 46% 54% 57% ;
+        }
+    }
+    .textCartContainer {
+        margin-top: -20px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+
+    .textCart {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .textCart2{
+        margin: 0;
+
+    }
+}
