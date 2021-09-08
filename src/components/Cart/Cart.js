@@ -7,11 +7,9 @@ const Cart = () => {
     
     const {cart, clear, removeItem} = useContext(CartContext);
     const [itemCart, setItemCart] = useState([]);
-    // const [empty, setEmpty] = useState(true)
     
     useEffect(() => {
         setItemCart(cart);
-        // setEmpty(false)
     }, [cart])
 
     
@@ -29,6 +27,8 @@ const Cart = () => {
                             );
                         })}
                     </div>
+                    <p>Total: ${itemCart.reduce(( acc, item ) => {return acc+= item.price*item.quantity }, 0)}
+                    </p>
                 </div>
                 }
             </div>
