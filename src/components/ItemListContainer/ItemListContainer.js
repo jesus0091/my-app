@@ -1,26 +1,31 @@
 import React, { useState, useEffect, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { db } from "../../Firebase";
+import { collection, query, getDocs } from "@firebase/firestore";
 import Spinner from "../Spinner/Spinner";
 import ItemList from "../ItemList/ItemList";
-import { CartContext } from "../../context/CartContext";
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [load, setLoad] = useState(true);
     const items = useContext(CartContext);
     console.log('items', items)
-    
-    useEffect(() => {
+
+    const getproducts = async () => {
+        const dataFirebase = [];
+        const q = query( collection( db, "products" ));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+        dataFirebase.push({ ...doc.data(), Id: doc.id });
+        });
+        setProducts(dataFirebase);
+        setLoad(false);
+      };
+      useEffect(() => {
         setTimeout(() => {
-        fetch("https://fakestoreapi.com/products")
-            .then((response) => {
-            return response.json();
-            })
-            .then((data) => {
-            setProducts(data);
-            setLoad(false);
-            });
-        }, 2000);
-  }, []);
+            getproducts();
+            }, 2000);
+      }, []);
 
   return <div>{load ? <Spinner /> : <ItemList products={products} />}</div>;
 };

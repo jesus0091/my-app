@@ -27,7 +27,7 @@ const Cart = () => {
                             );
                         })}
                     </div>
-                    <p>Total: ${itemCart.reduce(( acc, item ) => {return acc+= item.price*item.quantity }, 0)}
+                    <p className='totalSum'>Total: ${itemCart.reduce(( acc, item ) => {return acc+= item.price*item.quantity }, 0)}
                     </p>
                 </div>
                 }

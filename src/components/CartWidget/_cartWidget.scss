@@ -1,11 +1,12 @@
+.cartLink {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+}
+
 .cartWidget {
     position: relative;
     
-    .cartLink {
-        text-decoration: none;
-        color: white;
-        opacity: 0.8;
-    }
 
     .cartBadge {
         position: absolute;

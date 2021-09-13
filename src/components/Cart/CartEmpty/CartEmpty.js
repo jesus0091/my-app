@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 
+
 const CartEmpty = () => {
   const container = useRef(null);
   useEffect(() => {
@@ -21,7 +22,8 @@ const CartEmpty = () => {
             </div>
             <div className='textCartContainer'>
               <p className='textCart'>Tu carrito está vacio</p>
-              <p className='textCart2'>Vuelve al Home y agrega productos!</p>
+              <p className='textCart2'>¡Vuelve al Home</p>
+              <p className='textCart2'>y agrega productos!</p>
             </div>
           </div>
       // </div>

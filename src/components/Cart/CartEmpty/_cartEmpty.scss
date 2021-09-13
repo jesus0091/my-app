@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 85vh;
     
     .cartEmpty {
         position: relative;
@@ -14,7 +14,17 @@
             height: 10rem;
 
         }
-
+        // &::after {
+        //     position: absolute;
+        //     content: '';
+        //     top: -20px;
+        //     left: -10px;
+        //     width: 10rem;
+        //     height: 10rem;
+        //     background: $color-2;
+        //     z-index: -2;
+        //     border-radius: 43% 57% 48% 52% / 43% 46% 54% 57% ;
+        // }
         &::before {
             position: absolute;
             content: '';
@@ -28,20 +38,28 @@
     .textCartContainer {
         margin-top: -20px;
         display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .textCart {
+        font-family: 'Montserrat', sans-serif;
         font-size: 1.25rem;
         font-weight: bold;
         margin: 0;
+        color: $color-9;
+        text-align: center;
     }
 
     .textCart2{
         margin: 0;
+        font-weight: bold;
+        color: rgba(0, 0, 0 , 0.7);
+        font-size: .75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        
 
     }
 }
