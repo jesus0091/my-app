@@ -3,6 +3,9 @@ import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Item from "../Item/Item";
 import { Link } from "react-router-dom";
+import { db } from "../../Firebase";
+import { collection, query, getDocs, where } from "@firebase/firestore";
+import Spinner from "../Spinner/Spinner";
 
 const CategoryListContainer = ({ match }) => {    
   const categoryId = match.params.id;
@@ -12,18 +15,23 @@ const CategoryListContainer = ({ match }) => {
   }
   const capCategoryId = capitalize(categoryId);
   const [category, setCategory] = useState([]);
+  const [load, setLoad] = useState(true);
+  
   useEffect(() => {
+    const getproducts = async () => {
+      const dataFirebase = [];
+      const q = query(collection(db, "products"), where("category", "==", categoryId));
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+      dataFirebase.push({ ...doc.data(), id: doc.id });
+      });
+      setCategory(dataFirebase);
+      setLoad(false);
+    };
+
     setTimeout(() => {
-      fetch(`https://fakestoreapi.com/products/category/${categoryId}`)
-        .then((response) => {
-          console.log(response);
-          return response.json();
-        })
-        .then((data) => {
-          console.log(data);
-          setCategory(data);
-        });
-    }, 0);
+        getproducts();
+        }, 2000);
   }, [categoryId]);
 
   return (
@@ -33,16 +41,18 @@ const CategoryListContainer = ({ match }) => {
       <div className="container">
         <h2>{capCategoryId}</h2>
         <div className="containerProducts">
-          {category.map((e) => {
-            return (
-              <div>
-                <Link className="itemLink" to={`/detail/${e.id}`}>
-                  <Item product={e} key={e.id} />
-                </Link>
-                {/* <Item key={e.id} product={e}/> */}
-              </div>
-            );
-          })}
+          {
+          load ? <Spinner/> : 
+            category.map((e) => {
+              return (
+                <div>
+                  <Link className="itemLink" to={`/detail/${e.id}`}>
+                    <Item product={e} key={e.id} />
+                  </Link>
+                  {/* <Item key={e.id} product={e}/> */}
+                </div>
+              );
+            })}
         </div>
       </div>
     </>

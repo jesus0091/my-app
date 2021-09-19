@@ -16,7 +16,7 @@ const ItemListContainer = () => {
         const q = query( collection( db, "products" ));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-        dataFirebase.push({ ...doc.data(), Id: doc.id });
+        dataFirebase.push({ ...doc.data(), id: doc.id });
         });
         setProducts(dataFirebase);
         setLoad(false);
@@ -24,7 +24,7 @@ const ItemListContainer = () => {
       useEffect(() => {
         setTimeout(() => {
             getproducts();
-            }, 2000);
+            }, 0);
       }, []);
 
   return <div>{load ? <Spinner /> : <ItemList products={products} />}</div>;

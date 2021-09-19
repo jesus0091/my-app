@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useCartContext } from '../../context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({ product, stock=5 }) => {
+const ItemDetail = ({ product }) => {
 
     const {addToCart} = useCartContext();
     console.log('addToCart', addToCart)
@@ -24,12 +24,12 @@ const ItemDetail = ({ product, stock=5 }) => {
                 <div className='detailBody'>
                     <h2>{product.title}</h2>
                     <p>${product.price}</p>
-                    <p>Quedan {stock-number} disponibles!</p>
+                    <p>Quedan {product.stock-number} disponibles!</p>
                     {
                         number === null? (
                             <ItemCount 
                             initial={1}
-                            stock={stock}
+                            stock={product.stock}
                             product={product}
                             onAdd = {onAdd}
                             />
