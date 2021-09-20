@@ -1,3 +1,5 @@
+import { faHandHoldingUsd, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
@@ -19,7 +21,6 @@ const Cart = () => {
                 {
                 cart.length === 0 ? <CartEmpty/> : 
                 <div>
-                    <button className='clearCart' onClick={clear}>Vaciar Carrito</button>
                     <div className='cartContainer'>
                         {itemCart.map((item) => {
                             return (
@@ -31,9 +32,17 @@ const Cart = () => {
                     </p>
                 </div>
                 }
-                <Link to='/pay'>
-                    <button className='clearCart' onClick={clear}>Ir a pagar</button>
-                </Link>
+                <div className='buttonsCart'>
+                    <button className='clearCart' onClick={clear}>
+                        <FontAwesomeIcon icon={faTrash}/>
+                        {/* <span>Vaciar</span> */}
+                    </button>
+                    <Link type='button' className='payCart' to='/pay' >
+                        
+                            <FontAwesomeIcon icon={faHandHoldingUsd} />
+                            <span>Pagar - Total: ${itemCart.reduce(( acc, item ) => {return acc+= item.price*item.quantity }, 0)}</span>
+                    </Link>
+                </div>
             </div>
 
     )

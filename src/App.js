@@ -10,7 +10,6 @@ import CategoryListContainer from './components/CategoryListContainer/CategoryLi
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import Pay from './components/Pay/Pay';
-// import {db} from './Firebase'
 
 function App() {
     return (
