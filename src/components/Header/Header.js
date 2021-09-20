@@ -18,9 +18,9 @@ const Header = () => {
                     <span className="brandHome">HOME</span>
                 </Navbar.Brand>
                 <Nav className="ml-auto">
-                    <Nav.Link className="link" href="#pricing">
+                    
                     <CartWidget />
-                    </Nav.Link>
+                    
                 </Nav>
             </Container>
         </Navbar>

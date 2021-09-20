@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext'
 import CartEmpty from './CartEmpty/CartEmpty';
 import CartItem from './CartItem/CartItem'
@@ -14,7 +15,6 @@ const Cart = () => {
 
     
     return (
-        
             <div className='container cartView'>
                 {
                 cart.length === 0 ? <CartEmpty/> : 
@@ -31,6 +31,9 @@ const Cart = () => {
                     </p>
                 </div>
                 }
+                <Link to='/pay'>
+                    <button className='clearCart' onClick={clear}>Ir a pagar</button>
+                </Link>
             </div>
 
     )

@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CategoryListContainer from './components/CategoryListContainer/CategoryListContainer';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
+import Pay from './components/Pay/Pay';
 // import {db} from './Firebase'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                         <Route path='/detail/:id' component={ItemDetailContainer} />
                         <Route path='/category/:id' component={CategoryListContainer} />
                         <Route path="/cart" component={Cart} />
+                        <Route path="/pay" component={Pay} />
                     </Switch>
                     <NavBar/>
                 </div>
