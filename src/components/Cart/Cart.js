@@ -15,6 +15,7 @@ const Cart = () => {
         setItemCart(cart);
     }, [cart])
 
+    const priceTotal = itemCart.reduce(( acc, item ) => {return acc+= item.price*item.quantity }, 0);
     
     return (
             <div className='container cartView'>
@@ -28,7 +29,7 @@ const Cart = () => {
                             );
                         })}
                     </div>
-                    <p className='totalSum'>Total: ${itemCart.reduce(( acc, item ) => {return acc+= item.price*item.quantity }, 0)}
+                    <p className='totalSum'>Total: ${priceTotal}
                     </p>
                 </div>
                 }
@@ -40,7 +41,7 @@ const Cart = () => {
                     <Link type='button' className='payCart' to='/pay' >
                         
                             <FontAwesomeIcon icon={faHandHoldingUsd} />
-                            <span>Pagar - Total: ${itemCart.reduce(( acc, item ) => {return acc+= item.price*item.quantity }, 0)}</span>
+                            <span>Pagar - Total: ${priceTotal}</span>
                     </Link>
                 </div>
             </div>

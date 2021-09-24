@@ -27,8 +27,8 @@ const NavBar = () => {
                     <div id="bubbleWrapper">
                         <Link to='/#' id="bubble1" className="bubble"><span className="icon"><FontAwesomeIcon icon={faHouseUser} /></span>
                         </Link>
-                        <Link id="bubble2" className="bubble"><span className="icon"><FontAwesomeIcon icon={faShoppingBag} /></span></Link>
-                        <Link id="bubble3" className="bubble"><span className="icon"><FontAwesomeIcon icon={faUserCircle} /></span></Link>
+                        <Link to='/#' id="bubble2" className="bubble"><span className="icon"><FontAwesomeIcon icon={faShoppingBag} /></span></Link>
+                        <Link to='/#' id="bubble3" className="bubble"><span className="icon"><FontAwesomeIcon icon={faUserCircle} /></span></Link>
                     </div>
                     <div id="menuWrapper">
                         <NavLink to='/#' id="menu1" className="menuElement" onClick={ () => move('1', '17%')}>
