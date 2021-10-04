@@ -10,6 +10,7 @@
     overflow: hidden;
     position: relative;
     padding: 0;
+    max-height: 25rem;
     
 
     .carousel-indicators {
@@ -28,7 +29,7 @@
     }
 
     .captionC {
-        top:0;
+        top: 20%;
     }
 }
 .greeting {
@@ -46,14 +47,14 @@
         left: 0;
         top: 0;
     }
+    .greetingText {
+        font-size: 3rem;
+        color: white;
+        font-weight: 900;
+        margin: 0;
+    }
 } 
 
-.greetingText {
-    font-size: 3rem;
-    color: white;
-    font-weight: 900;
-    margin: 0;
-}
 
 .greetingSubText {
     position: absolute;
@@ -68,7 +69,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 
     img {
         width: 110%;

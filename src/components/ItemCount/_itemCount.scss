@@ -34,10 +34,11 @@
         align-items: center;
         justify-content: center;
         border: none;
-        background: green;
+        background: $color-6;
         color: white;
         margin-top: 5px;
         vertical-align: middle;
+        font-size: 1rem;
 
         span {
             margin-left: 5px;

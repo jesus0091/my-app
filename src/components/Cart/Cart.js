@@ -31,21 +31,18 @@ const Cart = () => {
                     </div>
                     <p className='totalSum'>Total: ${priceTotal}
                     </p>
-                </div>
-                }
-                <div className='buttonsCart'>
-                    <button className='clearCart' onClick={clear}>
-                        <FontAwesomeIcon icon={faTrash}/>
-                        {/* <span>Vaciar</span> */}
-                    </button>
-                    <Link type='button' className='payCart' to='/pay' >
-                        
-                            <FontAwesomeIcon icon={faHandHoldingUsd} />
-                            <span>Pagar - Total: ${priceTotal}</span>
-                    </Link>
-                </div>
+                    <div className='buttonsCart'>
+                        <button className='clearCart' onClick={clear}>
+                            <FontAwesomeIcon icon={faTrash}/>
+                        </button>
+                        <Link type='button' className='payCart' to='/pay' >
+                            
+                                <FontAwesomeIcon icon={faHandHoldingUsd} />
+                                <span>Pagar - Total: ${priceTotal}</span>
+                        </Link>
+                    </div>
+                </div>}
             </div>
-
     )
 }
 

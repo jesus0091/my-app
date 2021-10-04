@@ -1,10 +1,10 @@
 import React from 'react'
-import Form from './PayComponents/Form'
+import FormPay from './PayComponents/Form'
 
 const Pay = () => {
     return (
         <div>
-            <Form />
+            <FormPay />
         </div>
     )
 }

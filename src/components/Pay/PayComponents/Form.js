@@ -1,157 +1,95 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState} from "react";
 import { CartContext } from "../../../context/CartContext";
-import { addDoc, collection, updateDoc, doc, Timestamp} from "firebase/firestore";
+import { collection, Timestamp, addDoc } from "firebase/firestore";
 import { db } from "../../../Firebase";
-import Login from "./Login";
-import buyer from "./buyer";
+import '@firebase/firestore';
+//import buyer from "./buyer";
 
 const Form = () => {
 
-    const { cart, clear, login } = useContext(CartContext);
-    const [items, SetItems] = useState([]);
-    const [priceTotal, setPriceTotal] = useState([]);
-    const [ticketId, SetTickedId] = useState("");
+    const { cart, cartPrice, clear} = useContext(CartContext);
+    const [data_usuario, setData_usuario] = useState([])
+    const [orden, setOrden] = useState('')
+    const priceTotal = cartPrice()
+    const orders = collection(db ,'orders')
 
-    useEffect(() => {
-        cart.forEach((item) => {
-            items.push({
-                id: item.id,
-                name: item.name,
-                quantity: item.quantity,
-                price: item.price,
-                image: item.image,
-            });
-            setPriceTotal(
-                cart.reduce((acc, item) => {
-                return (acc += item.price * item.quantity);
-                }, 0)
-            );
-          SetItems(items);
-        });
-        console.log(items)
-    }, [items, SetItems, cart]);
+    const variaValor = (e) => {
+        setData_usuario({ ...data_usuario,
+            [e.target.name]: e.target.value
+        })
+    }
 
-    // const ticket = async (e) => {
-    
-    //     if (cart.length > 0) {
-    //         e.preventDefault();
-            
-    //         let obj;
-    //         let f = document.getElementById("payForm");
-    //         let name = f.name.value;
-    //         let phone = f.phone.value;
-    //         let email = f.email.value;
-    //         let emailx2 = f.emailx2.value;
-
-    //         if ((name !== "" && email !== "" && phone !== "") || login !== {}) {
-    //             let buy = new buyer(name, phone, email, items);
-    //             login !== {} ? 
-    //                 (obj = {
-    //                     email: login.email,
-    //                     name: login.name,
-    //                     items: items,
-    //                     price: priceTotal,
-    //                     time: Timestamp.fromDate(new Date()),
-    //                 })
-    //                 : (obj = {
-    //                     name: buy.name,
-    //                     email: buy.email,
-    //                     phone: buy.phone,
-    //                     items: items,
-    //                     price: priceTotal,
-    //                     time: Timestamp.fromDate(new Date()),
-    //                 });
-    //         if (buy.email !== emailx2) {
-    //             return;
-    //         }
-    //         try {
-    //             const docRef = await addDoc(collection(db, "buy"), obj);
-    //             // updatestock();
-    //             console.log("Document written with ID: ", docRef.id);
-    //             SetTickedId(docRef.id);
-    //             clear();
-    //         } catch (e) {
-    //             console.error("Error adding document: ", e);
-    //         }
-    //     } else {
-        
-    //     console.log("invalido");
-    //     }
-    //     } else {
-    
-    //     }
-    // };
-
-    // const updatestock = () => {
-    //     cart.forEach(async (item) => {
-    //         const washingtonRef = doc(db, "products", item.id);
-    //         let nowStock = item.stock - item.quantity;
-    //         await updateDoc(washingtonRef, {
-    //             Stock: nowStock,
-    //         });
-    //     });
-    //   };
-
-    // const buy = async () => {
-    //     const object = {
-    //         title: 'testTitle',
-    //         description: 'testDescription'
-    //     }
-
-    //     await db.collection('buy').doc().set(object);
-    //     console.log('producto agregado')
-    // }
+    const submitForm = async (e) => {
+        e.preventDefault();
+        const newOrder={
+            buyer:{
+                nombre: data_usuario.nombre,
+                apellido: data_usuario.email,
+                email: data_usuario.email
+            // phone:data_usuario.phone
+            },
+            items: cart,
+            date: Timestamp.now(),
+            total: priceTotal,
+        }
+        const docRef = await addDoc((orders), newOrder)
+        setOrden(docRef.id)
+        console.log(docRef.id)
+        clear()
+    }
 
     return (
-        <div className="container w-50  jutify-content-center mt-5 pt-5">
-        <form id="payForm" className="d-flex flex-column  mt-5 pt-5 ">
-            
-            <input
-            type="text"
-            placeholder="Nombre"
-            name="name"
-            className="m-3"
+        <div className={`container ${orden ? 'hide' : 'show'}`} key={cart.id}>
+        <h1>Checkout</h1>
+       { cart.map(item => {return  (
+                    <div key={item.id}>
+                        <h3>{item.title}</h3>
+                        <p> ${item.price} x {item.quantity}</p>
+                        <p>Codigo: {item.id} </p> 
+                        
+                     </div> 
+                    
+                     )}, )
+                    
+       }
+       
+       <h2>Total: $ {priceTotal} </h2>
+       
+       <form method='POST' onSubmit={submitForm} >
+            <input 
+                onKeyUp={variaValor} 
+                onBlur={variaValor} 
+                type="text" 
+                name="nombre" 
+                placeholder="Nombre" 
             />
-                
-            <input
-            type="email"
-            placeholder="Correo electronico"
-            name="email"
-            className="m-3"
+            <input 
+                onKeyUp={variaValor} 
+                onBlur={variaValor} type="text" 
+                name="apellido" 
+                placeholder="Apellido" 
             />
-
-            <input
-            type="email"
-            placeholder="Repita su email"
-            name="emailx2"
-            className="m-3"
+            <input 
+                onKeyUp={variaValor} 
+                onBlur={variaValor} 
+                type="email" 
+                name="email" 
+                placeholder="E-mail"
             />
-            
-            <input
-            type="number"
-            placeholder="Celular"
-            name="phone"
-            className="m-3"
-            />
+            <button onSubmit={submitForm}  className="btn btn-primary m-3" >
+                Finalizar compra
+            </button> 
         </form>
-        <button>
-
-        <Login />
-        </button>
-
+       
+        <div className={`compraFinalizada  ${orden ? 'show' : 'hide'}` }>
+        <h2>¡Compra exitosa! Este es tu numero de seguimiento: {orden} por el total de {priceTotal}</h2>
+                
+        </div>;
         
-        <button
-            type="submit"
-            placeholder="submit"
-            // onClick={ticket}
-            className="btn btn-primary m-3"
-            value="finalizar"
-        >
-            Finalizar compra
-        </button>
+        
     
-        </div>
-    );
+       </div>
+    )
 };
 
 export default Form;

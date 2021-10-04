@@ -5,8 +5,9 @@ $lines: 2;
 
 
 .cardProduct {
+    text-decoration: none;
     border-radius: 7px;
-    background: #fff5ea7a;
+    background: #fff5ea42;
     position: relative;
     overflow: hidden;
     box-shadow: .5px .5px 5px .5px rgba(0, 0, 0, 0.2);
@@ -44,10 +45,13 @@ $lines: 2;
 
 
         .cardTitle {
+            text-decoration: none;
             display: block;
             display: -webkit-box;
             height: $font-size * $line-height * $lines;
-            font-size: $font-size;
+            font-size: 1rem;
+            color: black;
+            letter-spacing: 0.5px;
             line-height: $line-height;
             -webkit-line-clamp: $lines;
             -webkit-box-orient: vertical;
@@ -59,12 +63,12 @@ $lines: 2;
         .cardCategory {
             font-weight: bold;
             font-size: $font-size;
-            color: rgba( #000000, 0.5);
+            color: rgba($color-8, 0.5);
             margin: 0;
         }
         .cardPrice {
             font-size: 1.25rem;
-            color: rgb(70, 129, 255);
+            color: black;
             margin: 0;
         }
     }

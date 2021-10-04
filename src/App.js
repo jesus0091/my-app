@@ -10,6 +10,7 @@ import CategoryListContainer from './components/CategoryListContainer/CategoryLi
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import Pay from './components/Pay/Pay';
+import About from './views/About/About';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Header/>
                     <Switch>
                         <Route path='/' exact component={Home} />
+                        <Route path='/about' exact component={About} />
                         <Route path='/profile' component={Profile} />
                         <Route path='/detail/:id' component={ItemDetailContainer} />
                         <Route path='/category/:id' component={CategoryListContainer} />

@@ -38,8 +38,8 @@ const CategoryListContainer = ({ match }) => {
     <>
         <Banner greeting="Hola!" />
         <Category />
-        <div className="container">
-            <h2>{capCategoryId}</h2>
+        <div className="container mb-5 pb-4">
+            <h2 className='titleCategory'>{capCategoryId}</h2>
             <div className="containerProducts">
             {
             load ? <Spinner/> : 

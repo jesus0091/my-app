@@ -17,12 +17,13 @@ const ItemDetail = ({ product }) => {
 
     return (
         <Container>
-            <div className='detailCard'>
-                <div className='imgViewP'>
-                    <img className='imgDetail' src={product.image} alt='Producto ' />
+            <div className='detailCard row'>
+                <div className='col-12 col-md-6 imgViewP'>
+                    <img className='imgDetail' src={product.image} alt='Producto' />
                 </div>
-                <div className='detailBody'>
+                <div className='col-12 col-md-6 detailBody'>
                     <h2>{product.title}</h2>
+                    <p>{product.category}</p>
                     <p>${product.price}</p>
                     <p>Quedan {product.stock-number} disponibles!</p>
                     {

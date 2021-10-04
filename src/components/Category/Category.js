@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import image from '../Category/image/silla_category.png'
 import image1 from '../Category/image/sillones_category.png'
+import image2 from '../Category/image/racktv.png'
+import image3 from '../Category/image/mesa.png'
 
 const Category = () => {
     return (
@@ -22,11 +24,15 @@ const Category = () => {
                         </Link>
                         <Link className="category c-3" to="/category/Mesas">
                                 <span className='categoryName'>Mesas</span>
-                                <img className='imageCategory' src={image} alt='category 1'/>
+                                <div className='imageCategory'>
+                                        <img  src={image3} alt='category 1'/>
+                                </div>
                         </Link>
-                        <Link className="category c-4" to="/category/jewelery">
+                        <Link className="category c-4" to="/category/Racks">
                                 <span className='categoryName'>Racks de Tv</span>
-                                <img className='imageCategory' src={image} alt='category 1'/>           
+                                <div className='imageCategory'>
+                                        <img  src={image2} alt='category 1'/>
+                                </div>           
                         </Link>
                 </div>
         </div>

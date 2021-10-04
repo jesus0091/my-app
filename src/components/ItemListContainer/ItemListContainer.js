@@ -12,22 +12,25 @@ const ItemListContainer = () => {
     console.log('items', items)
 
     const getproducts = async () => {
+        
         const dataFirebase = [];
         const q = query( collection( db, "products" ));
         const querySnapshot = await getDocs(q);
+        
         querySnapshot.forEach((doc) => {
-        dataFirebase.push({ ...doc.data(), id: doc.id });
+            dataFirebase.push({ ...doc.data(), id: doc.id });
         });
+
         setProducts(dataFirebase);
         setLoad(false);
-      };
-      useEffect(() => {
+    };
+    useEffect(() => {
         setTimeout(() => {
             getproducts();
             }, 0);
-      }, []);
+    }, []);
 
-  return <div>{load ? <Spinner /> : <ItemList products={products} />}</div>;
+return <div>{load ? <Spinner /> : <ItemList products={products} />}</div>;
 };
 
 export default ItemListContainer;

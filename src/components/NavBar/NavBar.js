@@ -1,7 +1,7 @@
 import React from 'react'
 import {gsap} from 'gsap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHouseUser, faShoppingBag, faUserCircle} from '@fortawesome/free-solid-svg-icons'
+import {faHouseUser, faInfoCircle, faShoppingBag} from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
@@ -27,18 +27,18 @@ const NavBar = () => {
                     <div id="bubbleWrapper">
                         <Link to='/#' id="bubble1" className="bubble"><span className="icon"><FontAwesomeIcon icon={faHouseUser} /></span>
                         </Link>
-                        <Link to='/#' id="bubble2" className="bubble"><span className="icon"><FontAwesomeIcon icon={faShoppingBag} /></span></Link>
-                        <Link to='/#' id="bubble3" className="bubble"><span className="icon"><FontAwesomeIcon icon={faUserCircle} /></span></Link>
+                        <Link to='/profile' id="bubble2" className="bubble"><span className="icon"><FontAwesomeIcon icon={faShoppingBag} /></span></Link>
+                        <Link to='/about' id="bubble3" className="bubble"><span className="icon"><FontAwesomeIcon icon={faInfoCircle} /></span></Link>
                     </div>
                     <div id="menuWrapper">
                         <NavLink to='/#' id="menu1" className="menuElement" onClick={ () => move('1', '17%')}>
                             <FontAwesomeIcon icon={faHouseUser} />
                         </NavLink>
-                        <NavLink to="/#" id="menu2" className="menuElement" onClick={ () => move('2', '50.0%')}>
+                        <NavLink to="/profile" id="menu2" className="menuElement" onClick={ () => move('2', '50.0%')}>
                             <FontAwesomeIcon icon={faShoppingBag} />
                         </NavLink>
-                        <NavLink to="/profile" id="menu3" className="menuElement" onClick={ () => move('3', '83%')}>
-                            <FontAwesomeIcon icon={faUserCircle} />
+                        <NavLink to="/about" id="menu3" className="menuElement" onClick={ () => move('3', '83%')}>
+                            <FontAwesomeIcon icon={faInfoCircle} />
                         </NavLink>
                     </div>
                 </div>

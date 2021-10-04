@@ -1,5 +1,14 @@
 @import '../../scss/base/colors';
 
+.titleCategory {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: $color-8;
+    letter-spacing: 1px;
+    font-size: 1.15rem;
+    text-align: center;
+    margin: 1rem 0;
+}
 .categoryContainer {
     display: flex;
     flex-direction: column;
@@ -52,7 +61,7 @@
             img {
                 display: block;
                 z-index: -1;
-                height: 80px;
+                height: 90px;
             }
         }
 
