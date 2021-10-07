@@ -7,6 +7,15 @@ const CartItem = ({data, removeItem}) => {
     }
     const totalItemPrice = data.quantity*data.price;
 
+    const format = (num) => {
+        const n = String(num),
+        p = n.indexOf('.')
+        return n.replace(
+            /\d(?=(?:\d{3})+(?:\.|$))/g,
+            (m, i) => p < 0 || i < p ? `${m}.` : m
+            )
+        }
+
     return (
         <div className='cartItem col-12'>
             <div className='row cartItemBody'>
@@ -25,7 +34,7 @@ const CartItem = ({data, removeItem}) => {
             </div>
             <div className='row'>
                 <div className='itemPrice'>
-                    <p>${totalItemPrice}</p>
+                    <p>${format(totalItemPrice)}</p>
                 </div>
             </div>
         </div>

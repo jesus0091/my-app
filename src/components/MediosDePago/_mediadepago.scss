@@ -1,0 +1,33 @@
+.tableMP{
+    td {
+        vertical-align: middle;
+        padding: 0.5rem;
+        color: green;
+
+        span {
+            color: black;
+        }
+    }
+}
+
+.listDC {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    img {
+        width: 45px;
+    }
+    
+
+}

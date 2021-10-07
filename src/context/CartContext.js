@@ -36,9 +36,18 @@ export const CartProvider = ({ children }) => {
         return cart.reduce((accumulator, dato) => 
         { return Number(accumulator + dato.quantity * dato.price)}, 0);
     }
+
+    const format = (num) => {
+        const n = String(num),
+        p = n.indexOf('.')
+        return n.replace(
+            /\d(?=(?:\d{3})+(?:\.|$))/g,
+            (m, i) => p < 0 || i < p ? `${m}.` : m
+            )
+        }
     
     return(
-        <CartContext.Provider value={{ cart, addToCart, removeItem, clear, login, setLogin, cartPrice }}>
+        <CartContext.Provider value={{ cart, addToCart, removeItem, clear, login, setLogin, cartPrice, format }}>
             {children}
         </CartContext.Provider>
         

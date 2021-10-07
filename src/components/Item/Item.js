@@ -1,6 +1,15 @@
 import React from 'react'
 
 const Item = ({product}) => {
+    const format = (num) => {
+        const n = String(num),
+        p = n.indexOf('.')
+        return n.replace(
+            /\d(?=(?:\d{3})+(?:\.|$))/g,
+            (m, i) => p < 0 || i < p ? `${m}.` : m
+            )
+        }
+    const priceFormat = format(product.price);
     return (
         <div className='cardProduct container-fluid'>
             <div className='row'>
@@ -8,10 +17,9 @@ const Item = ({product}) => {
                     <img src={product.image} alt={product.id}/>
                 </div>
                 <div className='cardBody col-8 col-lg-12'>
-                    <h3 className='cardTitle'>{product.title}</h3>
                     <p className='cardCategory'>{product.category}</p>
-                    <span className='cardPrice'>$ {product.price}</span>
-                    {/* <span className='cardPrice'>$ {product.discount}</span> */}
+                    <h3 className='cardTitle'>{product.title}</h3>
+                    <span className='cardPrice'>$ {priceFormat}</span>
                 </div>
             </div>
         </div>

@@ -10,6 +10,15 @@ const Cart = () => {
     
     const {cart, clear, removeItem} = useContext(CartContext);
     const [itemCart, setItemCart] = useState([]);
+
+    const format = (num) => {
+        const n = String(num),
+        p = n.indexOf('.')
+        return n.replace(
+            /\d(?=(?:\d{3})+(?:\.|$))/g,
+            (m, i) => p < 0 || i < p ? `${m}.` : m
+            )
+        }
     
     useEffect(() => {
         setItemCart(cart);
@@ -29,7 +38,7 @@ const Cart = () => {
                             );
                         })}
                     </div>
-                    <p className='totalSum'>Total: ${priceTotal}
+                    <p className='totalSum'>Total: ${format(priceTotal)}
                     </p>
                     <div className='buttonsCart'>
                         <button className='clearCart' onClick={clear}>
@@ -38,7 +47,7 @@ const Cart = () => {
                         <Link type='button' className='payCart' to='/pay' >
                             
                                 <FontAwesomeIcon icon={faHandHoldingUsd} />
-                                <span>Pagar - Total: ${priceTotal}</span>
+                                <span>Pagar - Total: ${format(priceTotal)}</span>
                         </Link>
                     </div>
                 </div>}
